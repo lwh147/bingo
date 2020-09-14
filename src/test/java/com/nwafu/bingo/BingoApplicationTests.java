@@ -1,3 +1,4 @@
+/*
 package com.nwafu.bingo;
 
 import com.nwafu.bingo.dao.*;
@@ -35,18 +36,22 @@ class BingoApplicationTests {
 	//admin的mapper测试
 	@Test
 	void contextLoads() throws Exception {
-		/*Admin admin = new Admin();
+		*/
+/*Admin admin = new Admin();
 		admin.setAname("yangfan3");
 		admin.setPassword("123456");
-		adminDao.add(admin);*/
+		adminDao.add(admin);*//*
+
 
 		//System.out.println("添加成功");
 
 		//查询指定用户名
-		/*List<Admin> list = adminDao.getByName("yangfan2");
+		*/
+/*List<Admin> list = adminDao.getByName("yangfan2");
 		for(Admin a:list){
 			System.out.println(a.getAname());
-		}*/
+		}*//*
+
 		//删除测试
 		//adminDao.deleteById(2);
 		//更新测试
@@ -79,16 +84,20 @@ class BingoApplicationTests {
 
 		//userDao.add(user);
 
-		List<User> list = userDao.getUserPage(2,3);
-		for(User u : list){
-			System.out.println(u.getUname());
-		}
-		/*List<User> list2 = userDao.getByName("程冰");
+//		List<User> list = userDao.getUserPage(2,3);
+//		for(User u : list){
+//			System.out.println(u.getUname());
+//		}
+		*/
+/*List<User> list2 = userDao.getByName("程冰");
 		for(User u : list2){
 			System.out.println(u.getUname());
-		}*/
-		/*User u = userDao.getById(1);
-		System.out.println(u.getUname());*/
+		}*//*
+
+		*/
+/*User u = userDao.getById(1);
+		System.out.println(u.getUname());*//*
+
 
 		//user.setUid(2);
 		//userDao.update(user);
@@ -118,15 +127,19 @@ class BingoApplicationTests {
 		//gameDao.delete(game);
 
 
-		/*List<Game> list1 = gameDao.getAll();
+		*/
+/*List<Game> list1 = gameDao.getAll();
 		for(Game i: list1){
 			System.out.println(i.getGname());
-		}*/
-		/*List<Game> list2 = gameDao.getByName("Need for Speed");
+		}*//*
+
+		*/
+/*List<Game> list2 = gameDao.getByName("Need for Speed");
 
 		for(Game i: list2){
 			System.out.println(i.getGname());
-		}*/
+		}*//*
+
 		Game g = gameDao.getById(1);
 		System.out.println(g.getGname());
 
@@ -144,10 +157,12 @@ class BingoApplicationTests {
 		comment.setTouid(23);
 		//commentDao.add(comment);
 
-		/*List<Comment> list = commentDao.getById("uid",2);
+		*/
+/*List<Comment> list = commentDao.getById("uid",2);
 		for(Comment c: list){
 			System.out.println(c.getContent());
-		}*/
+		}*//*
+
 		commentDao.deleteById("uid",1);
 	}
 	@Test
@@ -159,12 +174,16 @@ class BingoApplicationTests {
 		evaluation.setGid(3);
 		evaluation.setScore(Float.valueOf("7.7"));
 		evaluation.setEid(4);
-		/*evaluationDao.add(evaluation);*/
+		*/
+/*evaluationDao.add(evaluation);*//*
 
-		/*List<Evaluation> list = evaluationDao.getById("eid",1);
+
+		*/
+/*List<Evaluation> list = evaluationDao.getById("eid",1);
 		for(Evaluation a:list){
 			System.out.println(a.getContent());
-		}*/
+		}*//*
+
 
 		//evaluationDao.deleteById("uid",1);
 
@@ -184,16 +203,22 @@ class BingoApplicationTests {
 		//post.setPid(1);
 		postDao.add(post);
 
-		/*List<Post> list1 = postDao.getAll();
+		*/
+/*List<Post> list1 = postDao.getAll();
 		for(Post a: list1){
 			System.out.println(a.getContent());
-		}*/
-		/*List<Post> list2 = postDao.getById("uid",1);
+		}*//*
+
+		*/
+/*List<Post> list2 = postDao.getById("uid",1);
 		for(Post a: list2){
 			System.out.println(a.getPtheme());
-		}*/
+		}*//*
+
 		//postDao.update(post);
-		/*postDao.deleteById("uid",2);*/
+		*/
+/*postDao.deleteById("uid",2);*//*
+
 	}
 	@Test
 	void testOrderlist() throws Exception{
@@ -205,11 +230,13 @@ class BingoApplicationTests {
 		//orderlistDao.add(orderlist);
 
 		//List<Orderlist> list = orderlistDao.getAll();
-		/*List<Orderlist> list = orderlistDao.getById("uid",1);
+		*/
+/*List<Orderlist> list = orderlistDao.getById("uid",1);
 		for(Orderlist l: list){
 			System.out.println(l.getOrderDetails());
 		}
-		*/
+		*//*
+
 		orderlistDao.delete(orderlist);
 	}
 	@Test
@@ -224,12 +251,16 @@ class BingoApplicationTests {
 		//systemReqDao.updateById(systemReq);
 		//systemReqDao.add(systemReq);
 
-		/*List<SystemReq> list = systemReqDao.getAll();
+		*/
+/*List<SystemReq> list = systemReqDao.getAll();
 		for(SystemReq i:list){
 			System.out.println(i.getOs());
-		}*/
-		/*SystemReq s = systemReqDao.getById(1);
-		System.out.println(s.getOs());*/
+		}*//*
+
+		*/
+/*SystemReq s = systemReqDao.getById(1);
+		System.out.println(s.getOs());*//*
+
 
 		systemReqDao.deleteById(1);
 	}
@@ -246,22 +277,29 @@ class BingoApplicationTests {
 		//System.out.println(u.getUname());
 
 		//获取所有用户
-		/*List<User> list = personService.getAllUser();
+		*/
+/*List<User> list = personService.getAllUser();
 		for(User u:list){
 			System.out.println(u.getUname());
-		}*/
-		/*List<Admin> list1 = personService.getAllAdmin();
+		}*//*
+
+		*/
+/*List<Admin> list1 = personService.getAllAdmin();
 		for(Admin a:list1){
 			System.out.println(a.getAname());
-		}*/
+		}*//*
+
 
 		//User user = personService.getUserById(0);
-		/*try {
+		*/
+/*try {
 			System.out.println(user.getUname());
 		}catch (Exception e){
 
-		}*/
-		/*User user = new User();
+		}*//*
+
+		*/
+/*User user = new User();
 		user.setGamelist("test");
 		user.setPassword("12021");
 		user.setUalias("wanghui");
@@ -273,7 +311,8 @@ class BingoApplicationTests {
 		user.setUsex("nannvnan");
 		user.setWishlist("lol");
 
-		personService.addPerson(user);*/
+		personService.addPerson(user);*//*
+
 
 		personService.deleteAdminById(5);
 	}
@@ -290,7 +329,8 @@ class BingoApplicationTests {
 		post.setPtime("1999/12/1");
 		post.setTitle("玄远");
 		post.setUid(2);
-		/*communityService.addPostOrComment(post);
+		*/
+/*communityService.addPostOrComment(post);
 
 		Comment comment = new Comment();
 		comment.setContent("woai92644849946");
@@ -307,22 +347,28 @@ class BingoApplicationTests {
 
 		for(Post p:list){
 			System.out.println(p.getTitle());
-		}*/
+		}*//*
+
 		post.setPid(5);
 
 		//communityService.updatePost(post);
 
-		/*List<Comment> list = communityService.getCommentById("uid",2);
+		*/
+/*List<Comment> list = communityService.getCommentById("uid",2);
 
 		for(Comment c:list){
 			System.out.println(c.getContent());
-		}*/
-		/*List<Post> list1 = communityService.getPostById("pid",6);
+		}*//*
+
+		*/
+/*List<Post> list1 = communityService.getPostById("pid",6);
 		for(Post c:list1){
 			System.out.println(c.getTitle());
-		}*/
+		}*//*
+
 		communityService.deletePostOrCommentById("cid",10,1);
 		communityService.deletePostOrCommentById("pid",5,0);
 
 	}
 }
+*/
