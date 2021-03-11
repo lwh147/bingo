@@ -12,12 +12,21 @@
     <groupId>com.nwafu</groupId>
     <artifactId>bingo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <!-- jar包方式 -->
+    <packaging>jar</packaging>
+    <!--<packaging>war</packaging>-->
     <name>bingo</name>
     <description>Online game sales platform</description>
 
     <properties>
-        <java.version>1.8</java.version>
+        <!--设置编码-->
+        <project.build.sorceEncoding>UTF-8</project.build.sorceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <!--设置java版本-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
         <lucene.version>8.5.2</lucene.version>
     </properties>
 
@@ -31,13 +40,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <!--			 打成war包时取消使用内置tomcat容器-->
-            <exclusions>
-                <!--                <exclusion>-->
-                <!--                    <groupId>org.springframework.boot</groupId>-->
-                <!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
-                <!--                </exclusion>-->
-            </exclusions>
+            <!--            <exclusions>-->
+            <!--                <exclusion>-->
+            <!--                    <groupId>org.springframework.boot</groupId>-->
+            <!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+            <!--                </exclusion>-->
+            <!--            </exclusions>-->
         </dependency>
+
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -50,18 +60,21 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
         <!--添加mysql依赖-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.47</version>
         </dependency>
+
         <!--添加json依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.62</version>
         </dependency>
+
         <!--添加poi依赖-->
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -73,6 +86,7 @@
             <artifactId>poi</artifactId>
             <version>3.9</version>
         </dependency>
+
         <!--添加lucene依赖-->
         <!--<dependency>
             <groupId>org.apache.lucene</groupId>
@@ -89,6 +103,7 @@
             <artifactId>lucene-highlighter</artifactId>
             <version>${lucene.version}</version>
         </dependency>
+
         <!--添加分词器依赖-->
         <dependency>
             <groupId>com.chenlb.mmseg4j</groupId>
@@ -101,6 +116,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <!--添加邮件依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -134,6 +150,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.nwafu.bingo.BingoApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
